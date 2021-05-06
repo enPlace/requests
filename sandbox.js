@@ -1,4 +1,4 @@
-function getTodo(callbackFunction){
+const getTodo=(callbackFunction)=>{
 
 const request = new XMLHttpRequest();
 let url = "https://jsonplaceholder.typicode.com/todos/"
@@ -18,6 +18,8 @@ request.onreadystatechange =()=>{
 request.open("GET", url)
 request.send()
 }
+console.log(1)
+console.log(2)
 
 function errorHandler(error, data){
     console.log("callbackFunction executed")
@@ -28,4 +30,6 @@ function errorHandler(error, data){
         console.log(error)
     }
 }
+console.log(3)
+console.log(4)
 getTodo(errorHandler)
